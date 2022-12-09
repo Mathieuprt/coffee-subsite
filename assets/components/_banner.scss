@@ -1,66 +1,110 @@
-.banner{
+.banner {
+  &.banner-home {
+    padding: 10rem 2.4rem;
 
-    &.banner-home{
-        padding: 10rem 2.4rem;
+    background-image: url("/images/home/mobile/image-hero-coffeepress.jpg");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
 
-        background-image: url('/images/home/mobile/image-hero-coffeepress.jpg');
-        background-position: center bottom;
-        background-repeat: no-repeat;
-        background-size: cover;
+    border-radius: 10px;
+    overflow: hidden;
 
-        border-radius: 10px;
-        overflow: hidden;
+    @include mediaquery($small) {
+      background-image: url("/images/home/tablet/image-hero-coffeepress.jpg");
 
-        @include mediaquery($small){
-            background-image: url('/images/home/tablet/image-hero-coffeepress.jpg');
-
-            padding: 10rem 2.4rem 10rem 5.8rem;
-        }
-
-        @include mediaquery($medium){
-            background-image: url('/images/home/desktop/image-hero-coffeepress.jpg');
-
-            padding: 10rem 2.4rem 10rem 8.5rem;
-        }
-
-
-
-        .banner-home__content{
-
-            @include mediaquery($small){
-                max-width: 40rem;
-            }
-            @include mediaquery($medium){
-                max-width: 49.3rem;
-            }
-            
-
-            h1{
-                text-align: center;
-                @include mediaquery($small){
-                    text-align: left;
-                }
-            }
-
-            p{
-                text-align: center;
-                color: var(--white);
-                font-weight: 300;
-                margin: 2.4rem 0 3.9rem;
-                @include mediaquery($small){
-                    text-align: left;
-                }
-            }
-
-            .banner-button{
-                display: flex;
-                justify-content: center;
-                @include mediaquery($small){
-                    justify-content: flex-start;
-                }
-            }
-
-        }
-
+      padding: 10rem 2.4rem 10rem 5.8rem;
     }
+
+    @include mediaquery($medium) {
+      background-image: url("/images/home/desktop/image-hero-coffeepress.jpg");
+
+      padding: 10rem 2.4rem 10rem 8.5rem;
+    }
+
+    .banner-home__content {
+      @include mediaquery($small) {
+        max-width: 40rem;
+      }
+      @include mediaquery($medium) {
+        max-width: 49.3rem;
+      }
+
+      h1 {
+        text-align: center;
+        @include mediaquery($small) {
+          text-align: left;
+        }
+      }
+
+      p {
+        text-align: center;
+        color: var(--white);
+        font-weight: 300;
+        margin: 2.4rem 0 3.9rem;
+        @include mediaquery($small) {
+          text-align: left;
+        }
+      }
+
+      .banner-button {
+        display: flex;
+        justify-content: center;
+        @include mediaquery($small) {
+          justify-content: flex-start;
+        }
+      }
+    }
+  }
+
+  &.banner-about {
+    padding: 10rem 2.4rem;
+
+    background-image: url("/images/about/mobile/image-hero-whitecup.jpg");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    @include mediaquery($small) {
+      background-image: url("/images/about/tablet/image-hero-whitecup.jpg");
+
+      padding: 11.8rem 5.8rem;
+    }
+
+    @include mediaquery($medium) {
+      background-image: url("/images/about/desktop/image-hero-whitecup.jpg");
+
+      padding: 13.7rem 8.5rem;
+    }
+
+    .banner-about__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include mediaquery($small) {
+        align-items: flex-start;
+
+        max-width: 40rem;
+      }
+
+      @include mediaquery($medium) {
+        max-width: 45rem;
+      }
+
+      p {
+        text-align: center;
+        color: var(--white);
+
+        margin-top: 2.4rem;
+
+        @include mediaquery($small) {
+          text-align: start;
+        }
+      }
+    }
+  }
 }
