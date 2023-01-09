@@ -18,13 +18,18 @@
   }
 
   .text__img--image {
-    border-radius: 10px;
     overflow: hidden;
 
     width: 100%;
 
     @include mediaquery($small) {
       width: 45%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .source__img {
+      border-radius: 10px;
     }
   }
 
